@@ -1,0 +1,12 @@
+# Backend (Express + TypeScript)
+
+1. cd backend
+2. cp .env.example .env and set JWT_SECRET
+3. npm install
+4. npx prisma generate
+5. npx prisma migrate dev --name init
+6. npm run dev
+
+API notes:
+- Auth cookie: token (HttpOnly). Frontend should call fetch with credentials: 'include'.
+- Endpoints: /api/auth, /api/users, /api/posts, /api/feed, /api (likes/comments)
